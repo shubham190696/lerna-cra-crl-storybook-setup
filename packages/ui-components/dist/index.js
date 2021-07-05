@@ -2,14 +2,42 @@ function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'defau
 
 var React = _interopDefault(require('react'));
 
-var styles = {"test":"_styles-module__test__3ybTi"};
+function _extends() {
+  _extends = Object.assign || function (target) {
+    for (var i = 1; i < arguments.length; i++) {
+      var source = arguments[i];
 
-var ExampleComponent = function ExampleComponent(_ref) {
-  var text = _ref.text;
+      for (var key in source) {
+        if (Object.prototype.hasOwnProperty.call(source, key)) {
+          target[key] = source[key];
+        }
+      }
+    }
+
+    return target;
+  };
+
+  return _extends.apply(this, arguments);
+}
+
+function Button(props) {
+  var children = props.children;
+  return /*#__PURE__*/React.createElement("button", _extends({
+    type: "button"
+  }, props), children);
+}
+
+var styles = {"test":"_3ybTi"};
+
+var ExampleComponent = function ExampleComponent() {
   return /*#__PURE__*/React.createElement("div", {
     className: styles.test
-  }, "Example Component: ", text);
+  }, "Example Component:");
+};
+var SSButton = function SSButton(props) {
+  return /*#__PURE__*/React.createElement(Button, props);
 };
 
 exports.ExampleComponent = ExampleComponent;
+exports.SSButton = SSButton;
 //# sourceMappingURL=index.js.map
